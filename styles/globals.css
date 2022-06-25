@@ -17,3 +17,6 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.msg{
+  @apply text-transparent bg-clip-text bg-gradient-to-t backdrop-blur-xl from-slate-800 via-cyan-600 to-black
+}

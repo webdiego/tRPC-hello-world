@@ -1,7 +1,7 @@
-import 'tailwindcss/tailwind.css'
+import 'tailwindcss/tailwind.css';
 import { withTRPC } from '@trpc/next';
 import { AppType } from 'next/dist/shared/lib/utils';
-import { AppRouter } from './api/trpc/[trpc]';
+import { AppRouter } from '@/server/router/index';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
