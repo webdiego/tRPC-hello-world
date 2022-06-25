@@ -1,5 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
 generator client {
   provider = "prisma-client-js"
 }
@@ -9,12 +7,11 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-
 model People {
-  id        String     @default(cuid()) @id
-  name     String?
-  message   String?
-  flag      String
+  id        String  @id @default(cuid())
+  name      String  @default("")
+  message   String  @default("")
+  flag      String  @default("")
+  feeling   String  @default("")
   published Boolean @default(false)
 }
-

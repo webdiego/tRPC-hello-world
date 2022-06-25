@@ -1,4 +1,10 @@
 export const Flags = [
+    {
+        "code": "P",
+        "emoji": "🏴‍☠️",
+        "name": "Pirates",
+       
+    },
   {
       "code": "AD",
       "emoji": "🇦🇩",
