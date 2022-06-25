@@ -4,11 +4,11 @@ export default function Button({ onClick }) {
   return (
     <div className="w-full">
       <button
-        className="w-full rounded-lg text-white  font-semibold px-4 py-2 bg-gradient-to-r p-[5px] from-[#7928ca] to-[#ff0080]"
+        className="w-full rounded-lg text-white  font-semibold px-4  py-2 bg-gradient-to-r p-[5px] from-[#7928ca] to-[#ff0080] hover:opacity-70"
         onClick={onClick}
       >
         <div className="w-full flex justify-center items-center">
-          <p>Send</p>
+          <p className="text-sm">Send</p>
           <svg
             className="ml-2 transition-all ease-out duration-800 hover:rotate-[25deg]"
             xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,6 @@ export default function Button({ onClick }) {
             height="18"
             viewBox="0 0 24 24"
           >
-            <title>send</title>
             <g
               strokeLinecap="round"
               strokeLinejoin="round"

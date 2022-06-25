@@ -4,6 +4,7 @@ import { trpc } from '../utils/trpc';
 import Select from 'components/Select';
 import Input from 'components/Input';
 import Button from 'components/Button';
+import TextArea from 'components/TextArea';
 // import { useRouter } from 'next/router';
 // import { GetServerSideProps } from 'next';
 // import LastMsgs from 'components/LastMsgs';
@@ -42,14 +43,13 @@ const Home: NextPage = () => {
   const handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMsg(e.target.value);
   };
-
-  const addMsg = () => {
-    mutation.mutate({ name: name, message: msg, flag: flag, feeling: feeling });
-  };
-
   const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
+  const addMsg = () => {
+    mutation.mutate({ name: name, message: msg, flag: flag, feeling: feeling });
+  };
+  console.log(allMsgs);
   // console.log(as);
   return (
     <>
@@ -64,15 +64,22 @@ const Home: NextPage = () => {
             </h1>
           </div>
           <div className="w-full  gap-2">
-            <div className="w-full flex flex-col md:flex-row items-start gap-2 justify-center md:items-end">
-              <Input onChange={handleChangeText} text="Message" />
-              <Input onChange={handleChangeName} text="By" />
-              <Select data={Flags} onChange={handleChangeFlag} text="From" />
-              <Select data={Feel} onChange={handleChangeFeeling} text="Feel" />
+            <div className="w-full flex flex-col  items-start gap-2 justify-center md:items-end">
+              <div className="w-full">
+                <TextArea onChange={handleChangeText} text="Message" />
+              </div>
+
+              <div className="w-full flex items-end justify-center space-x-4">
+                <Input onChange={handleChangeName} text="By" />
+                <Select data={Flags} onChange={handleChangeFlag} text="From" />
+                <Select data={Feel} onChange={handleChangeFeeling} text="Feel" />
+                <Button onClick={addMsg} />
+              </div>
             </div>
-            <div className=" mt-2">
+
+            {/* <div className=" mt-2">
               <Button onClick={addMsg} />
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -83,13 +90,13 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* MESSAGES */}
-        <div className=" min-h-[30vh] flex w-full gap-6 flex-wrap justify-center px-10 pb-5">
+        <div className=" min-h-[30vh] flex w-full gap-6 flex-wrap justify-center px-10 pb-5 ">
           {allMsgs &&
-            allMsgs?.map((el, i) => {
-              const { flag, message, name } = el;
+            allMsgs?.slice(0, 10).map((el, i) => {
+              const { flag, message, name, feeling } = el;
               return (
                 <div key={i}>
-                  <Message {...{ flag, message, name }} />
+                  <Message {...{ flag, message, name, feeling }} />
                 </div>
               );
             })}
