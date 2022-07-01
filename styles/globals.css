@@ -3,7 +3,12 @@ body {
   padding: 0;
   margin: 0;
 }
-
+body {
+  background: url('/img/gradient.jpeg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: center;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -19,22 +24,35 @@ a {
   @apply text-transparent bg-clip-text bg-gradient-to-t backdrop-blur-xl from-slate-800 via-cyan-600 to-black;
 }
 
-/* @layer base {
+@layer base {
   @font-face {
     font-family: 'Street';
     src: url('../public/fonts/Street.woff2') format('woff2');
   }
   @font-face {
     font-family: 'Jungle';
-    src: local('Jungle') url('/fonts/Jungle.woff2') format('woff2');
-    font-style: normal;
-    font-display: auto;
-    font-display: swap;
+    src: url('../public/fonts/Jungle.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Org';
+    src: url('../public/fonts/Org.ttf');
+  }
+  @font-face {
+    font-family: 'Plastic';
+    src: url('../public/fonts/Plastic.ttf');
+  }
+  @font-face {
+    font-family: 'Ka';
+    src: url('../public/fonts/Ka.otf');
+  }
+  @font-face {
+    font-family: 'Baloon';
+    src: url('../public/fonts/Baloon.otf');
   }
 }
 .font-Jungle {
   font-family: Jungle !important;
-} */
+}
 * {
   scrollbar-width: thin;
   scrollbar-color: blue orange;

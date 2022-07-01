@@ -40,8 +40,9 @@ const Home: NextPage = () => {
   const handleChangeFeeling = (event: ChangeEvent<{ value: string }>) => {
     setFeeling(event?.target?.value);
   };
-  const handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setMsg(e.target.value);
+  const handleChangeMsg = (e: React.ChangeEvent<HTMLInputElement>, msg: string) => {
+    if (msg.length <= 10) setMsg(e.target.value);
+    else msg.substring(0, 10);
   };
   const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -54,19 +55,23 @@ const Home: NextPage = () => {
   return (
     <>
       <div className="h-full">
-        <div className="max-w-lg px-10 md:px-0 md:mx-auto min-h-[70vh] flex-col flex items-center justify-center">
-          <div className="flex flex-col  items-center justify-center  text-center">
+        <div className="max-w-2xl px-10 md:px-0 md:mx-auto min-h-[70vh] flex-col flex items-center justify-center">
+          <div className=" max-w-2xl flex flex-col  items-center justify-center  text-center">
             <h1 className=" self-start font-semibold transform -rotate-[25deg] text-lg text-black">
               say
             </h1>
-            <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-600 to-[#ff0080] mb-5">
+            <h1 className="relative font-ka text-[90px] text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-600 to-[#ff0080] mb-5">
               HELLO WORLD
             </h1>
           </div>
-          <div className="w-full  gap-2">
+          <div className="w-full  gap-2 max-w-lg">
             <div className="w-full flex flex-col  items-start gap-2 justify-center md:items-end">
               <div className="w-full">
-                <TextArea onChange={handleChangeText} text="Message" />
+                <TextArea
+                  text="Message"
+                  msg={msg}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeMsg(e, msg)}
+                />
               </div>
 
               <div className="w-full flex items-end justify-center space-x-4">
@@ -76,10 +81,6 @@ const Home: NextPage = () => {
                 <Button onClick={addMsg} />
               </div>
             </div>
-
-            {/* <div className=" mt-2">
-              <Button onClick={addMsg} />
-            </div> */}
           </div>
 
           <div>

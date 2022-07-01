@@ -5,8 +5,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        org: 'Org',
         street: 'Street',
         jungle: 'Jungle',
+        ka: 'Ka',
+        plastic: 'Plastic',
+        baloon: 'Baloon',
       },
     },
   },
