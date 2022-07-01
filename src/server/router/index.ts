@@ -18,16 +18,18 @@ export const appRouter = trpc
       name: z.string(),
       message: z.string(),
       flag: z.string(),
-      feeling:z.string()
+      feeling:z.string(),
+      nationality: z.string()
     }),
     async resolve({ input }) {
-      const {name,message, flag, feeling }= input
+      const {name,message, flag, feeling, nationality }= input
       const msg = await prisma.people.create({
         data: {
          name,
          message,
          flag: flag === ''? '🏴‍☠️':flag,
-         feeling
+         feeling,
+         nationality
         }
       })
       return msg ;

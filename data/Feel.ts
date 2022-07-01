@@ -1,7 +1,7 @@
 export const Feel = [
   {
     "emoji": "😀"
-  , "description": "grinning face"
+  , "name": "grinning face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "grinning"
@@ -15,7 +15,7 @@ export const Feel = [
   }
 , {
     "emoji": "😃"
-  , "description": "grinning face with big eyes"
+  , "name": "grinning face with big eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smiley"
@@ -30,7 +30,7 @@ export const Feel = [
   }
 , {
     "emoji": "😄"
-  , "description": "grinning face with smiling eyes"
+  , "name": "grinning face with smiling eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smile"
@@ -46,7 +46,7 @@ export const Feel = [
   }
 , {
     "emoji": "😁"
-  , "description": "beaming face with smiling eyes"
+  , "name": "beaming face with smiling eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "grin"
@@ -58,7 +58,7 @@ export const Feel = [
   }
 , {
     "emoji": "😆"
-  , "description": "grinning squinting face"
+  , "name": "grinning squinting face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "laughing"
@@ -73,7 +73,7 @@ export const Feel = [
   }
 , {
     "emoji": "😅"
-  , "description": "grinning face with sweat"
+  , "name": "grinning face with sweat"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "sweat_smile"
@@ -86,7 +86,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤣"
-  , "description": "rolling on the floor laughing"
+  , "name": "rolling on the floor laughing"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "rofl"
@@ -100,7 +100,7 @@ export const Feel = [
   }
 , {
     "emoji": "😂"
-  , "description": "face with tears of joy"
+  , "name": "face with tears of joy"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "joy"
@@ -113,7 +113,7 @@ export const Feel = [
   }
 , {
     "emoji": "🙂"
-  , "description": "slightly smiling face"
+  , "name": "slightly smiling face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "slightly_smiling_face"
@@ -125,7 +125,7 @@ export const Feel = [
   }
 , {
     "emoji": "🙃"
-  , "description": "upside-down face"
+  , "name": "upside-down face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "upside_down_face"
@@ -137,7 +137,7 @@ export const Feel = [
   }
 , {
     "emoji": "😉"
-  , "description": "winking face"
+  , "name": "winking face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "wink"
@@ -150,7 +150,7 @@ export const Feel = [
   }
 , {
     "emoji": "😊"
-  , "description": "smiling face with smiling eyes"
+  , "name": "smiling face with smiling eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "blush"
@@ -163,7 +163,7 @@ export const Feel = [
   }
 , {
     "emoji": "😇"
-  , "description": "smiling face with halo"
+  , "name": "smiling face with halo"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "innocent"
@@ -176,7 +176,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥰"
-  , "description": "smiling face with hearts"
+  , "name": "smiling face with hearts"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smiling_face_with_three_hearts"
@@ -189,7 +189,7 @@ export const Feel = [
   }
 , {
     "emoji": "😍"
-  , "description": "smiling face with heart-eyes"
+  , "name": "smiling face with heart-eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "heart_eyes"
@@ -203,7 +203,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤩"
-  , "description": "star-struck"
+  , "name": "star-struck"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "star_struck"
@@ -216,7 +216,7 @@ export const Feel = [
   }
 , {
     "emoji": "😘"
-  , "description": "face blowing a kiss"
+  , "name": "face blowing a kiss"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "kissing_heart"
@@ -229,7 +229,7 @@ export const Feel = [
   }
 , {
     "emoji": "😗"
-  , "description": "kissing face"
+  , "name": "kissing face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "kissing"
@@ -241,7 +241,7 @@ export const Feel = [
   }
 , {
     "emoji": "☺️"
-  , "description": "smiling face"
+  , "name": "smiling face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "relaxed"
@@ -255,7 +255,7 @@ export const Feel = [
   }
 , {
     "emoji": "😚"
-  , "description": "kissing face with closed eyes"
+  , "name": "kissing face with closed eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "kissing_closed_eyes"
@@ -267,7 +267,7 @@ export const Feel = [
   }
 , {
     "emoji": "😙"
-  , "description": "kissing face with smiling eyes"
+  , "name": "kissing face with smiling eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "kissing_smiling_eyes"
@@ -279,7 +279,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥲"
-  , "description": "smiling face with tear"
+  , "name": "smiling face with tear"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smiling_face_with_tear"
@@ -291,7 +291,7 @@ export const Feel = [
   }
 , {
     "emoji": "😋"
-  , "description": "face savoring food"
+  , "name": "face savoring food"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "yum"
@@ -305,7 +305,7 @@ export const Feel = [
   }
 , {
     "emoji": "😛"
-  , "description": "face with tongue"
+  , "name": "face with tongue"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "stuck_out_tongue"
@@ -317,7 +317,7 @@ export const Feel = [
   }
 , {
     "emoji": "😜"
-  , "description": "winking face with tongue"
+  , "name": "winking face with tongue"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "stuck_out_tongue_winking_eye"
@@ -331,7 +331,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤪"
-  , "description": "zany face"
+  , "name": "zany face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "zany_face"
@@ -345,7 +345,7 @@ export const Feel = [
   }
 , {
     "emoji": "😝"
-  , "description": "squinting face with tongue"
+  , "name": "squinting face with tongue"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "stuck_out_tongue_closed_eyes"
@@ -358,7 +358,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤑"
-  , "description": "money-mouth face"
+  , "name": "money-mouth face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "money_mouth_face"
@@ -371,7 +371,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤗"
-  , "description": "hugging face"
+  , "name": "hugging face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "hugs"
@@ -383,7 +383,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤭"
-  , "description": "face with hand over mouth"
+  , "name": "face with hand over mouth"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "hand_over_mouth"
@@ -397,7 +397,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤫"
-  , "description": "shushing face"
+  , "name": "shushing face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "shushing_face"
@@ -411,7 +411,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤔"
-  , "description": "thinking face"
+  , "name": "thinking face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "thinking"
@@ -423,7 +423,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤐"
-  , "description": "zipper-mouth face"
+  , "name": "zipper-mouth face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "zipper_mouth_face"
@@ -437,7 +437,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤨"
-  , "description": "face with raised eyebrow"
+  , "name": "face with raised eyebrow"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "raised_eyebrow"
@@ -450,7 +450,7 @@ export const Feel = [
   }
 , {
     "emoji": "😐"
-  , "description": "neutral face"
+  , "name": "neutral face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "neutral_face"
@@ -463,7 +463,7 @@ export const Feel = [
   }
 , {
     "emoji": "😑"
-  , "description": "expressionless face"
+  , "name": "expressionless face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "expressionless"
@@ -475,7 +475,7 @@ export const Feel = [
   }
 , {
     "emoji": "😶"
-  , "description": "face without mouth"
+  , "name": "face without mouth"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "no_mouth"
@@ -489,7 +489,7 @@ export const Feel = [
   }
 , {
     "emoji": "😶‍🌫️"
-  , "description": "face in clouds"
+  , "name": "face in clouds"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "face_in_clouds"
@@ -501,7 +501,7 @@ export const Feel = [
   }
 , {
     "emoji": "😏"
-  , "description": "smirking face"
+  , "name": "smirking face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smirk"
@@ -514,7 +514,7 @@ export const Feel = [
   }
 , {
     "emoji": "😒"
-  , "description": "unamused face"
+  , "name": "unamused face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "unamused"
@@ -527,7 +527,7 @@ export const Feel = [
   }
 , {
     "emoji": "🙄"
-  , "description": "face with rolling eyes"
+  , "name": "face with rolling eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "roll_eyes"
@@ -539,7 +539,7 @@ export const Feel = [
   }
 , {
     "emoji": "😬"
-  , "description": "grimacing face"
+  , "name": "grimacing face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "grimacing"
@@ -551,7 +551,7 @@ export const Feel = [
   }
 , {
     "emoji": "😮‍💨"
-  , "description": "face exhaling"
+  , "name": "face exhaling"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "face_exhaling"
@@ -563,7 +563,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤥"
-  , "description": "lying face"
+  , "name": "lying face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "lying_face"
@@ -576,7 +576,7 @@ export const Feel = [
   }
 , {
     "emoji": "😌"
-  , "description": "relieved face"
+  , "name": "relieved face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "relieved"
@@ -589,7 +589,7 @@ export const Feel = [
   }
 , {
     "emoji": "😔"
-  , "description": "pensive face"
+  , "name": "pensive face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "pensive"
@@ -601,7 +601,7 @@ export const Feel = [
   }
 , {
     "emoji": "😪"
-  , "description": "sleepy face"
+  , "name": "sleepy face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "sleepy"
@@ -614,7 +614,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤤"
-  , "description": "drooling face"
+  , "name": "drooling face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "drooling_face"
@@ -626,7 +626,7 @@ export const Feel = [
   }
 , {
     "emoji": "😴"
-  , "description": "sleeping face"
+  , "name": "sleeping face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "sleeping"
@@ -639,7 +639,7 @@ export const Feel = [
   }
 , {
     "emoji": "😷"
-  , "description": "face with medical mask"
+  , "name": "face with medical mask"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "mask"
@@ -653,7 +653,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤒"
-  , "description": "face with thermometer"
+  , "name": "face with thermometer"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "face_with_thermometer"
@@ -666,7 +666,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤕"
-  , "description": "face with head-bandage"
+  , "name": "face with head-bandage"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "face_with_head_bandage"
@@ -679,7 +679,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤢"
-  , "description": "nauseated face"
+  , "name": "nauseated face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "nauseated_face"
@@ -694,7 +694,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤮"
-  , "description": "face vomiting"
+  , "name": "face vomiting"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "vomiting_face"
@@ -708,7 +708,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤧"
-  , "description": "sneezing face"
+  , "name": "sneezing face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "sneezing_face"
@@ -722,7 +722,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥵"
-  , "description": "hot face"
+  , "name": "hot face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "hot_face"
@@ -736,7 +736,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥶"
-  , "description": "cold face"
+  , "name": "cold face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "cold_face"
@@ -750,7 +750,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥴"
-  , "description": "woozy face"
+  , "name": "woozy face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "woozy_face"
@@ -763,7 +763,7 @@ export const Feel = [
   }
 , {
     "emoji": "😵"
-  , "description": "knocked-out face"
+  , "name": "knocked-out face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "dizzy_face"
@@ -775,7 +775,7 @@ export const Feel = [
   }
 , {
     "emoji": "😵‍💫"
-  , "description": "face with spiral eyes"
+  , "name": "face with spiral eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "face_with_spiral_eyes"
@@ -787,7 +787,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤯"
-  , "description": "exploding head"
+  , "name": "exploding head"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "exploding_head"
@@ -801,7 +801,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤠"
-  , "description": "cowboy hat face"
+  , "name": "cowboy hat face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "cowboy_hat_face"
@@ -813,7 +813,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥳"
-  , "description": "partying face"
+  , "name": "partying face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "partying_face"
@@ -827,7 +827,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥸"
-  , "description": "disguised face"
+  , "name": "disguised face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "disguised_face"
@@ -839,7 +839,7 @@ export const Feel = [
   }
 , {
     "emoji": "😎"
-  , "description": "smiling face with sunglasses"
+  , "name": "smiling face with sunglasses"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "sunglasses"
@@ -852,7 +852,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤓"
-  , "description": "nerd face"
+  , "name": "nerd face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "nerd_face"
@@ -866,7 +866,7 @@ export const Feel = [
   }
 , {
     "emoji": "🧐"
-  , "description": "face with monocle"
+  , "name": "face with monocle"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "monocle_face"
@@ -878,7 +878,7 @@ export const Feel = [
   }
 , {
     "emoji": "😕"
-  , "description": "confused face"
+  , "name": "confused face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "confused"
@@ -890,7 +890,7 @@ export const Feel = [
   }
 , {
     "emoji": "😟"
-  , "description": "worried face"
+  , "name": "worried face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "worried"
@@ -903,7 +903,7 @@ export const Feel = [
   }
 , {
     "emoji": "🙁"
-  , "description": "slightly frowning face"
+  , "name": "slightly frowning face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "slightly_frowning_face"
@@ -915,7 +915,7 @@ export const Feel = [
   }
 , {
     "emoji": "☹️"
-  , "description": "frowning face"
+  , "name": "frowning face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "frowning_face"
@@ -927,7 +927,7 @@ export const Feel = [
   }
 , {
     "emoji": "😮"
-  , "description": "face with open mouth"
+  , "name": "face with open mouth"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "open_mouth"
@@ -942,7 +942,7 @@ export const Feel = [
   }
 , {
     "emoji": "😯"
-  , "description": "hushed face"
+  , "name": "hushed face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "hushed"
@@ -956,7 +956,7 @@ export const Feel = [
   }
 , {
     "emoji": "😲"
-  , "description": "astonished face"
+  , "name": "astonished face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "astonished"
@@ -970,7 +970,7 @@ export const Feel = [
   }
 , {
     "emoji": "😳"
-  , "description": "flushed face"
+  , "name": "flushed face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "flushed"
@@ -982,7 +982,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥺"
-  , "description": "pleading face"
+  , "name": "pleading face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "pleading_face"
@@ -996,7 +996,7 @@ export const Feel = [
   }
 , {
     "emoji": "😦"
-  , "description": "frowning face with open mouth"
+  , "name": "frowning face with open mouth"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "frowning"
@@ -1008,7 +1008,7 @@ export const Feel = [
   }
 , {
     "emoji": "😧"
-  , "description": "anguished face"
+  , "name": "anguished face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "anguished"
@@ -1021,7 +1021,7 @@ export const Feel = [
   }
 , {
     "emoji": "😨"
-  , "description": "fearful face"
+  , "name": "fearful face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "fearful"
@@ -1036,7 +1036,7 @@ export const Feel = [
   }
 , {
     "emoji": "😰"
-  , "description": "anxious face with sweat"
+  , "name": "anxious face with sweat"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "cold_sweat"
@@ -1049,7 +1049,7 @@ export const Feel = [
   }
 , {
     "emoji": "😥"
-  , "description": "sad but relieved face"
+  , "name": "sad but relieved face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "disappointed_relieved"
@@ -1064,7 +1064,7 @@ export const Feel = [
   }
 , {
     "emoji": "😢"
-  , "description": "crying face"
+  , "name": "crying face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "cry"
@@ -1078,7 +1078,7 @@ export const Feel = [
   }
 , {
     "emoji": "😭"
-  , "description": "loudly crying face"
+  , "name": "loudly crying face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "sob"
@@ -1093,7 +1093,7 @@ export const Feel = [
   }
 , {
     "emoji": "😱"
-  , "description": "face screaming in fear"
+  , "name": "face screaming in fear"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "scream"
@@ -1107,7 +1107,7 @@ export const Feel = [
   }
 , {
     "emoji": "😖"
-  , "description": "confounded face"
+  , "name": "confounded face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "confounded"
@@ -1119,7 +1119,7 @@ export const Feel = [
   }
 , {
     "emoji": "😣"
-  , "description": "persevering face"
+  , "name": "persevering face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "persevere"
@@ -1132,7 +1132,7 @@ export const Feel = [
   }
 , {
     "emoji": "😞"
-  , "description": "disappointed face"
+  , "name": "disappointed face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "disappointed"
@@ -1145,7 +1145,7 @@ export const Feel = [
   }
 , {
     "emoji": "😓"
-  , "description": "downcast face with sweat"
+  , "name": "downcast face with sweat"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "sweat"
@@ -1157,7 +1157,7 @@ export const Feel = [
   }
 , {
     "emoji": "😩"
-  , "description": "weary face"
+  , "name": "weary face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "weary"
@@ -1170,7 +1170,7 @@ export const Feel = [
   }
 , {
     "emoji": "😫"
-  , "description": "tired face"
+  , "name": "tired face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "tired_face"
@@ -1184,7 +1184,7 @@ export const Feel = [
   }
 , {
     "emoji": "🥱"
-  , "description": "yawning face"
+  , "name": "yawning face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "yawning_face"
@@ -1196,7 +1196,7 @@ export const Feel = [
   }
 , {
     "emoji": "😤"
-  , "description": "face with steam from nose"
+  , "name": "face with steam from nose"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "triumph"
@@ -1209,7 +1209,7 @@ export const Feel = [
   }
 , {
     "emoji": "😡"
-  , "description": "pouting face"
+  , "name": "pouting face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "rage"
@@ -1223,7 +1223,7 @@ export const Feel = [
   }
 , {
     "emoji": "😠"
-  , "description": "angry face"
+  , "name": "angry face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "angry"
@@ -1237,7 +1237,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤬"
-  , "description": "face with symbols on mouth"
+  , "name": "face with symbols on mouth"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "cursing_face"
@@ -1250,7 +1250,7 @@ export const Feel = [
   }
 , {
     "emoji": "😈"
-  , "description": "smiling face with horns"
+  , "name": "smiling face with horns"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smiling_imp"
@@ -1265,7 +1265,7 @@ export const Feel = [
   }
 , {
     "emoji": "👿"
-  , "description": "angry face with horns"
+  , "name": "angry face with horns"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "imp"
@@ -1281,7 +1281,7 @@ export const Feel = [
   }
 , {
     "emoji": "💀"
-  , "description": "skull"
+  , "name": "skull"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "skull"
@@ -1296,7 +1296,7 @@ export const Feel = [
   }
 , {
     "emoji": "☠️"
-  , "description": "skull and crossbones"
+  , "name": "skull and crossbones"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "skull_and_crossbones"
@@ -1310,7 +1310,7 @@ export const Feel = [
   }
 , {
     "emoji": "💩"
-  , "description": "pile of poo"
+  , "name": "pile of poo"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "hankey"
@@ -1325,7 +1325,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤡"
-  , "description": "clown face"
+  , "name": "clown face"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "clown_face"
@@ -1337,7 +1337,7 @@ export const Feel = [
   }
 , {
     "emoji": "👹"
-  , "description": "ogre"
+  , "name": "ogre"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "japanese_ogre"
@@ -1350,7 +1350,7 @@ export const Feel = [
   }
 , {
     "emoji": "👺"
-  , "description": "goblin"
+  , "name": "goblin"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "japanese_goblin"
@@ -1362,7 +1362,7 @@ export const Feel = [
   }
 , {
     "emoji": "👻"
-  , "description": "ghost"
+  , "name": "ghost"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "ghost"
@@ -1375,7 +1375,7 @@ export const Feel = [
   }
 , {
     "emoji": "👽"
-  , "description": "alien"
+  , "name": "alien"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "alien"
@@ -1388,7 +1388,7 @@ export const Feel = [
   }
 , {
     "emoji": "👾"
-  , "description": "alien monster"
+  , "name": "alien monster"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "space_invader"
@@ -1402,7 +1402,7 @@ export const Feel = [
   }
 , {
     "emoji": "🤖"
-  , "description": "robot"
+  , "name": "robot"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "robot"
@@ -1414,7 +1414,7 @@ export const Feel = [
   }
 , {
     "emoji": "😺"
-  , "description": "grinning cat"
+  , "name": "grinning cat"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smiley_cat"
@@ -1426,7 +1426,7 @@ export const Feel = [
   }
 , {
     "emoji": "😸"
-  , "description": "grinning cat with smiling eyes"
+  , "name": "grinning cat with smiling eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smile_cat"
@@ -1438,7 +1438,7 @@ export const Feel = [
   }
 , {
     "emoji": "😹"
-  , "description": "cat with tears of joy"
+  , "name": "cat with tears of joy"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "joy_cat"
@@ -1450,7 +1450,7 @@ export const Feel = [
   }
 , {
     "emoji": "😻"
-  , "description": "smiling cat with heart-eyes"
+  , "name": "smiling cat with heart-eyes"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "heart_eyes_cat"
@@ -1462,7 +1462,7 @@ export const Feel = [
   }
 , {
     "emoji": "😼"
-  , "description": "cat with wry smile"
+  , "name": "cat with wry smile"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "smirk_cat"
@@ -1474,7 +1474,7 @@ export const Feel = [
   }
 , {
     "emoji": "😽"
-  , "description": "kissing cat"
+  , "name": "kissing cat"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "kissing_cat"
@@ -1486,7 +1486,7 @@ export const Feel = [
   }
 , {
     "emoji": "🙀"
-  , "description": "weary cat"
+  , "name": "weary cat"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "scream_cat"
@@ -1499,7 +1499,7 @@ export const Feel = [
   }
 , {
     "emoji": "😿"
-  , "description": "crying cat"
+  , "name": "crying cat"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "crying_cat_face"
@@ -1513,7 +1513,7 @@ export const Feel = [
   }
 , {
     "emoji": "😾"
-  , "description": "pouting cat"
+  , "name": "pouting cat"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "pouting_cat"
@@ -1525,7 +1525,7 @@ export const Feel = [
   }
 , {
     "emoji": "🙈"
-  , "description": "see-no-evil monkey"
+  , "name": "see-no-evil monkey"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "see_no_evil"
@@ -1540,7 +1540,7 @@ export const Feel = [
   }
 , {
     "emoji": "🙉"
-  , "description": "hear-no-evil monkey"
+  , "name": "hear-no-evil monkey"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "hear_no_evil"
@@ -1554,7 +1554,7 @@ export const Feel = [
   }
 , {
     "emoji": "🙊"
-  , "description": "speak-no-evil monkey"
+  , "name": "speak-no-evil monkey"
   , "category": "Smileys & Emotion"
   , "aliases": [
       "speak_no_evil"

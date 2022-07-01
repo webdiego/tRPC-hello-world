@@ -4,9 +4,9 @@ export default function Message({ flag, message, name, feeling }) {
   return (
     <>
       <div
-        className="h-[120px]  flex flex-col items-center justify-start bg-white 
+        className="h-[140px] flex flex-col items-center justify-start bg-white 
         rounded-lg border shadow-md px-4 pt-4
-    hover:bg-gray-100 border-gray-300 opacity-75 hover:opacity-100 cursor-pointer w-[260px] "
+    hover:bg-gray-100 border-gray-300 opacity-75 hover:opacity-100 cursor-pointer w-[300px] "
       >
         <div className="w-full flex space-x-4 h-full">
           <div className="min-w-1/6 flex flex-col justify-between p">

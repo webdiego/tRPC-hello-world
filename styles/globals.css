@@ -7,7 +7,7 @@ body {
   background: url('/img/gradient.jpeg');
   background-repeat: no-repeat;
   background-position: top;
-  background-size: center;
+  background-size: cover;
 }
 a {
   color: inherit;

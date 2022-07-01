@@ -13,5 +13,7 @@ model People {
   message   String  @default("")
   flag      String  @default("")
   feeling   String  @default("")
+  nationality String @default("")
+  createdAt DateTime @default(now()) 
   published Boolean @default(false)
 }
