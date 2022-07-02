@@ -11,12 +11,11 @@ import { Feel } from '@data/Feel';
 
 const Home: NextPage = () => {
   //STATES
-  const [name, setName] = React.useState<string>('');
+  const [name, setName] = React.useState<string>('Blackbeard');
   const [flag, setFlag] = React.useState<string>('🏴‍☠️');
-  const [feeling, setFeeling] = React.useState<string>('');
-  const [nationality, setNationality] = React.useState<string>('');
+  const [feeling, setFeeling] = React.useState<string>('😀');
+  const [nationality, setNationality] = React.useState<string>('"Pirates"');
   const [msg, setMsg] = React.useState<string>('');
-
   //tRPC
   const { data: allMsgs, isLoading, refetch } = trpc.useQuery(['getMsgs']);
   // const as = trpc.useQuery(['getMsgs']);
@@ -29,13 +28,13 @@ const Home: NextPage = () => {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-
+  //  TODO: HANDLE ERROR
   const handleChangeFlag = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFlag(event.target.value.split(',')[0]);
     setNationality(event.target.value.split(',')[1]);
   };
   const handleChangeFeeling = (event: ChangeEvent<{ value: string }>) => {
-    setFeeling(event?.target?.value);
+    setFeeling(event?.target?.value.split(',')[0]);
   };
   const handleChangeMsg = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMsg(e.target.value);
@@ -44,21 +43,22 @@ const Home: NextPage = () => {
     setName(e.target.value);
   };
   const addMsg = () => {
-    mutation.mutate({
-      name: name,
-      message: msg,
-      flag: flag,
-      feeling: feeling,
-      nationality: nationality,
-    });
+    msg !== '' &&
+      mutation.mutate({
+        name: name,
+        message: msg,
+        flag: flag,
+        feeling: feeling,
+        nationality: nationality,
+      });
   };
-
+  console.log(allMsgs);
   return (
     <>
       <div className="h-full flex item-center flex-col justify-center min-h-screen p-10">
         <div className="max-w-2xl px-10 md:px-0 md:mx-auto min-full flex-col flex items-center justify-center">
           <div className=" max-w-2xl flex flex-col  items-center justify-center  text-center">
-            <h1 className=" self-start font-semibold transform -rotate-[25deg] text-lg text-black">
+            <h1 className=" self-start justify-end -mb-2 md:-mb-5 -ml-3 font-semibold transform -rotate-[25deg] text-sm md:text-lg text-black">
               say
             </h1>
             <h1 className="font-ka text-[50px] md:text-[70px] lg:text-[90px]  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-600 to-[#ff0080] ">
@@ -96,10 +96,10 @@ const Home: NextPage = () => {
                 ?.reverse()
                 .slice(0, 10)
                 .map((el, i) => {
-                  const { flag, message, name, feeling } = el;
+                  const { flag, message, name, feeling, createdAt } = el;
                   return (
                     <div key={i}>
-                      <Message {...{ flag, message, name, feeling }} />
+                      <Message {...{ flag, message, name, feeling, createdAt }} />
                     </div>
                   );
                 })}

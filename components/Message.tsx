@@ -1,29 +1,28 @@
 import React from 'react';
-
-export default function Message({ flag, message, name, feeling }) {
+import { format } from 'date-fns';
+export default function Message({ flag, message, name, feeling, createdAt }) {
   return (
     <>
       <div
-        className="h-[140px] flex flex-col items-center justify-start bg-white 
-        rounded-lg border shadow-md px-4 pt-4
+        className=" bg-white 
+        rounded-lg border shadow-md px-4 py-2
     hover:bg-gray-100 border-gray-300 opacity-75 hover:opacity-100 cursor-pointer w-[300px] "
       >
-        <div className="w-full flex space-x-4 h-full">
-          <div className="min-w-1/6 flex flex-col justify-between p">
-            <p className="w-full text-4xl ">{flag}</p>
-
-            <div className="flex items-center text-lg text-gray-700 ">
-              <span className=" font-semibold text-xs py-2">Feel: </span> {feeling}
-            </div>
+        <div className="w-full flex flex-col justify-between  h-full space-y-5">
+          <div className="flex flex-row items-start w-full h-full ">
+            <p className=" text-4xl mr-2">{flag}</p>
+            <h3 className="text-xs  tracking-tight text-gray-900 leading-5  ">{message}</h3>
           </div>
 
-          <div className="flex flex-col justify-between items-start w-full h-full">
-            <h5 className="text-xs  tracking-tight text-gray-900 leading-5 overflow-auto ">
-              {message}
-            </h5>
-
-            <p className="self-end text-gray-700 p-2 text-xs">
+          <div className="w-full flex items-start justify-between text-gray-700 text-base">
+            <p className="text-lg">
+              <span className=" font-semibold  text-xs">Feel: </span> {feeling}
+            </p>
+            <p className="text-xs self-center">
               <span className="font-semibold ">By:</span> {name}
+            </p>
+            <p className="text-xs self-center">
+              <span className="font-semibold ">At:</span> {format(new Date(createdAt), 'd-MMM-yy')}
             </p>
           </div>
         </div>
