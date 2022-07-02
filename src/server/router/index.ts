@@ -1,16 +1,24 @@
 import * as trpc from '@trpc/server';
 import { z } from 'zod';
 import { PrismaClient } from '@prisma/client'
+import { setCookie, getCookie } from 'cookies-next';
+import {Context} from './createContext'
 const prisma = new PrismaClient()
 
 
 export const appRouter = trpc
-  .router()
+  .router<Context>()
   .query('getMsgs', {
-    async resolve() {
+    async resolve({ctx}) {
+      let {res,req} = ctx
+       let ck =getCookie('sent',{ res,req }) || false
+     
+      
+      console.log(ck)
       const data = await prisma.people.findMany()
       if(!data) return []
-      return data ;
+     
+      return {data,ck};
     },
   })
   .mutation('add', {
@@ -21,18 +29,26 @@ export const appRouter = trpc
       feeling:z.string(),
       nationality: z.string()
     }),
-    async resolve({ input }) {
-      const {name,message, flag, feeling, nationality }= input
-      const msg = await prisma.people.create({
-        data: {
-         name,
-         message,
-         flag: flag === ''? '🏴‍☠️':flag,
-         feeling,
-         nationality
-        }
-      })
-      return msg ;
+    async resolve({ ctx,input }) {
+      let {res,req} = ctx
+      let ck = getCookie('sent',{ res,req })
+      if(ck) return 
+      if(!ck){
+
+        setCookie('sent',true,{ req, res, maxAge: 60 * 6 * 24 })
+  
+        const {name,message, flag, feeling, nationality }= input
+        const msg = await prisma.people.create({
+          data: {
+           name,
+           message,
+           flag: flag === ''? '🏴‍☠️':flag,
+           feeling,
+           nationality
+          }
+        })
+        return msg ;
+      }
     },
   })
 

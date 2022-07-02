@@ -14,21 +14,28 @@ const Home: NextPage = () => {
   const [name, setName] = React.useState<string>('Blackbeard');
   const [flag, setFlag] = React.useState<string>('🏴‍☠️');
   const [feeling, setFeeling] = React.useState<string>('😀');
-  const [nationality, setNationality] = React.useState<string>('"Pirates"');
+  const [nationality, setNationality] = React.useState<string>('Pirates');
   const [msg, setMsg] = React.useState<string>('');
   //tRPC
-  const { data: allMsgs, isLoading, refetch } = trpc.useQuery(['getMsgs']);
+  const { data, isLoading, refetch } = trpc.useQuery(['getMsgs']);
   // const as = trpc.useQuery(['getMsgs']);
   const mutation = trpc.useMutation(['add'], {
     onSuccess: () => {
       refetch();
     },
+    onError: (er) => {
+      console.log(er);
+    },
   });
+
+  //FIXME:
+  let allMsgs: any | undefined = data;
 
   if (isLoading) {
     return <div>Loading...</div>;
   }
   //  TODO: HANDLE ERROR
+
   const handleChangeFlag = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFlag(event.target.value.split(',')[0]);
     setNationality(event.target.value.split(',')[1]);
@@ -42,8 +49,10 @@ const Home: NextPage = () => {
   const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
-  const addMsg = () => {
-    msg !== '' &&
+  //TODO: //FIXME: ADD TYPES
+  const addMsg = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (msg !== '') {
       mutation.mutate({
         name: name,
         message: msg,
@@ -51,8 +60,16 @@ const Home: NextPage = () => {
         feeling: feeling,
         nationality: nationality,
       });
+      setName('Blackbeard');
+      setFlag('🏴‍☠️');
+      setFeeling('😀');
+      setNationality('Pirates');
+      setMsg('');
+    } else {
+      return;
+    }
   };
-  console.log(allMsgs);
+
   return (
     <>
       <div className="h-full flex item-center flex-col justify-center min-h-screen p-10">
@@ -71,12 +88,15 @@ const Home: NextPage = () => {
                 <TextArea text="Message" msg={msg} onChange={handleChangeMsg} />
               </div>
 
-              <div className="w-full flex items-end justify-center space-x-4">
+              <form
+                className="w-full flex items-end justify-center space-x-4"
+                onSubmit={(e: React.FormEvent<HTMLFormElement>) => addMsg(e)}
+              >
                 <Input onChange={handleChangeName} text="By" />
                 <Select data={Flags} onChange={handleChangeFlag} text="From" />
                 <Select data={Feel} onChange={handleChangeFeeling} text="Feel" />
-                <Button onClick={addMsg} />
-              </div>
+                <Button />
+              </form>
             </div>
           </div>
 
@@ -84,6 +104,7 @@ const Home: NextPage = () => {
             <>
               {mutation.error && <p>Something went wrong! {mutation.error.message}</p>}
               {mutation.data && <p className="mt-4"></p>}
+              {/* {data?.ck === true && <p className="mt-4">nono</p>} */}
             </>
           </div>
         </div>
@@ -91,15 +112,15 @@ const Home: NextPage = () => {
         <div className="max-w-7xl mx-auto mt-5">
           <h1 className="   text-sm text-black">Last messages:</h1>
           <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-5 place-items-center  ">
-            {allMsgs &&
-              [...allMsgs]
+            {allMsgs?.data &&
+              [...allMsgs?.data]
                 ?.reverse()
                 .slice(0, 10)
                 .map((el, i) => {
-                  const { flag, message, name, feeling, createdAt } = el;
+                  const { flag, message, name, feeling, createdAt, nationality } = el;
                   return (
                     <div key={i}>
-                      <Message {...{ flag, message, name, feeling, createdAt }} />
+                      <Message {...{ flag, message, name, feeling, createdAt, nationality }} />
                     </div>
                   );
                 })}

@@ -19,6 +19,23 @@ export default withTRPC<AppRouter>({
 
     return {
       url,
+      queryClientConfig: {
+        defaultOptions: {
+          queries: {
+            staleTime: 60,
+          },
+        },
+      },
+      headers() {
+        if (ctx?.req) {
+          return {
+            ...ctx.req?.headers,
+            //That means tha the request is made from the server
+            'x-ssr': '1',
+          };
+        }
+        return {};
+      },
       /**
        * @link https://react-query.tanstack.com/reference/QueryClient
        */
@@ -28,5 +45,6 @@ export default withTRPC<AppRouter>({
   /**
    * @link https://trpc.io/docs/ssr
    */
-  ssr: true,
+  // ssr: true,
+  ssr: false,
 })(MyApp);
