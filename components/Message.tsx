@@ -1,17 +1,22 @@
 import React from 'react';
 import { format } from 'date-fns';
-export default function Message({ flag, message, name, feeling, createdAt }) {
+export default function Message({ flag, message, name, feeling, createdAt, nationality }) {
+  const [showNationality, setShowNationality] = React.useState<boolean>(false);
+
   return (
     <>
       <div
-        className=" bg-white 
+        className="relative bg-white 
         rounded-lg border shadow-md px-4 py-2
-    hover:bg-gray-100 border-gray-300 opacity-75 hover:opacity-100 cursor-pointer w-[300px] "
+    hover:bg-gray-100 border-gray-300 opacity-75 hover:opacity-100 cursor-pointer w-[250px] "
+        onClick={() => setShowNationality(!showNationality)}
       >
         <div className="w-full flex flex-col justify-between  h-full space-y-5">
-          <div className="flex flex-row items-start w-full h-full ">
-            <p className=" text-4xl mr-2">{flag}</p>
-            <h3 className="text-xs  tracking-tight text-gray-900 leading-5  ">{message}</h3>
+          <div className="flex flex-row items-center w-full h-full ">
+            <div>
+              <p className=" text-3xl mr-2">{flag}</p>
+            </div>
+            <h3 className="text-xs  text-gray-900">{message}</h3>
           </div>
 
           <div className="w-full flex items-start justify-between text-gray-700 text-base">
@@ -26,6 +31,16 @@ export default function Message({ flag, message, name, feeling, createdAt }) {
             </p>
           </div>
         </div>
+        {showNationality && (
+          <div
+            className="absolute top-0 left-0 
+            bg-gradient-to-r from-purple-400 via-cyan-600 to-[#ff0080]
+           rounded-lg border shadow-md px-4 py-2 text-xl
+         border-gray-300  w-[250px] h-full flex justify-center items-center font-plastic text-white"
+          >
+            {nationality}
+          </div>
+        )}
       </div>
     </>
   );

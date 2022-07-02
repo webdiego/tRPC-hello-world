@@ -1,16 +1,13 @@
 import React from 'react';
 
-export default function Button({ onClick }) {
+export default function Button() {
   return (
-    <div className="w-full">
-      <button
-        className="w-full rounded-lg text-white  font-semibold px-4  py-2 bg-gradient-to-r p-[5px] from-[#7928ca] to-[#ff0080] hover:opacity-70"
-        onClick={onClick}
-      >
-        <div className="w-full flex justify-center items-center">
+    <div className="w-full group rounded-lg text-white  font-semibold px-4 py-2 bg-gradient-to-r p-[5px] from-[#7928ca] to-[#ff0080] ">
+      <button type="submit" className=" w-full ">
+        <div className=" group w-full flex justify-center items-center">
           <p className="text-sm">Send</p>
           <svg
-            className="ml-2 transition-all ease-out duration-800 hover:rotate-[25deg]"
+            className="ml-2 transition-all ease-out duration-800 group-hover:rotate-[25deg]"
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="18"

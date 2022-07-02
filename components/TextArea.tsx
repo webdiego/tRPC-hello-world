@@ -12,7 +12,7 @@ export default function Input({ msg, text, onChange }) {
           maxLength={20}
           className="w-full rounded-md py-1 px-1 text-sm outline-none"
           onChange={(e) => {
-            if (msg.length < 20) onChange(e, msg);
+            onChange(e, msg);
           }}
         ></textarea>
       </div>
