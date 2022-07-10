@@ -11,7 +11,7 @@ export const appRouter = trpc
   .query('getMsgs', {
     async resolve({ctx}) {
       let {res,req} = ctx
-       let ck =getCookie('sent',{ res,req }) || false
+      let ck = getCookie('sent',{ res,req }) || false
      
       
       console.log(ck)
@@ -29,10 +29,15 @@ export const appRouter = trpc
       feeling:z.string(),
       nationality: z.string()
     }),
-    async resolve({ ctx,input }) {
+    async resolve({ ctx, input }) {
       let {res,req} = ctx
       let ck = getCookie('sent',{ res,req })
-      if(ck) return 
+      if(ck){
+      throw new trpc.TRPCError({
+        code:'BAD_REQUEST',
+        message:'😏 You already sent a message!'
+      })
+      }
       if(!ck){
 
         setCookie('sent',true,{ req, res, maxAge: 60 * 6 * 24 })
@@ -49,6 +54,7 @@ export const appRouter = trpc
         })
         return msg ;
       }
+      
     },
   })
 

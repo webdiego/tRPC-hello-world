@@ -17,15 +17,11 @@ const Home: NextPage = () => {
   const [nationality, setNationality] = React.useState<string>('Pirates');
   const [msg, setMsg] = React.useState<string>('');
   //tRPC
-  const { data, isLoading, refetch } = trpc.useQuery(['getMsgs']);
-  // const as = trpc.useQuery(['getMsgs']);
+  const { data, isLoading,isError, refetch } = trpc.useQuery(['getMsgs']);
   const mutation = trpc.useMutation(['add'], {
     onSuccess: () => {
       refetch();
-    },
-    onError: (er) => {
-      console.log(er);
-    },
+    }
   });
 
   //FIXME:
@@ -35,7 +31,10 @@ const Home: NextPage = () => {
     return <div>Loading...</div>;
   }
   //  TODO: HANDLE ERROR
-
+  if (isError) {
+    return <div>Something wrong</div>;
+  }
+  
   const handleChangeFlag = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFlag(event.target.value.split(',')[0]);
     setNationality(event.target.value.split(',')[1]);
@@ -102,7 +101,11 @@ const Home: NextPage = () => {
 
           <div>
             <>
-              {mutation.error && <p>Something went wrong! {mutation.error.message}</p>}
+              {mutation.error && (
+                <p className="py-2 px-4 bg-white mt-6 text-xs rounded-md text-purple-600">
+                  {mutation.error.message}
+                </p>
+              )}
               {mutation.data && <p className="mt-4"></p>}
               {/* {data?.ck === true && <p className="mt-4">nono</p>} */}
             </>
