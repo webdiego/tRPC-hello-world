@@ -13,8 +13,6 @@ export const appRouter = trpc
       let {res,req} = ctx
       let ck = getCookie('sent',{ res,req }) || false
      
-      
-      console.log(ck)
       const data = await prisma.people.findMany()
       if(!data) return []
      
