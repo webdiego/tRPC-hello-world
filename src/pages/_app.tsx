@@ -13,10 +13,11 @@ export default withTRPC<AppRouter>({
      * If you want to use SSR, you need to use the server's full URL
      * @link https://trpc.io/docs/ssr
      */
-    const url = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}/api/trpc`
-      : 'http://localhost:3000/api/trpc';
+    const url = `https://t-rpc-hello-world.vercel.app//api/trpc`;
 
+    // const url = process.env.VERCEL_URL
+    //   ? `https://t-rpc-hello-world.vercel.app//api/trpc`
+    //   : 'http://localhost:3000/api/trpc';
     return {
       url,
       queryClientConfig: {
