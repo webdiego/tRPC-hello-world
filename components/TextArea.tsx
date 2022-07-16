@@ -10,7 +10,7 @@ export default function Input({ msg, text, onChange }) {
       <div className="rounded-lg w-full bg-gradient-to-r p-[2px] from-[#7928ca] to-[#ff0080] flex item-center">
         <textarea
           maxLength={20}
-          className="w-full rounded-md py-1 px-1 text-sm outline-none"
+          className="w-full rounded-lg py-1 px-1 text-sm outline-none"
           onChange={(e) => {
             onChange(e, msg);
           }}

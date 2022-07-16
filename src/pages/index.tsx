@@ -17,11 +17,11 @@ const Home: NextPage = () => {
   const [nationality, setNationality] = React.useState<string>('Pirates');
   const [msg, setMsg] = React.useState<string>('');
   //tRPC
-  const { data, isLoading,isError, refetch } = trpc.useQuery(['getMsgs']);
+  const { data, isLoading, isError, refetch } = trpc.useQuery(['getMsgs']);
   const mutation = trpc.useMutation(['add'], {
     onSuccess: () => {
       refetch();
-    }
+    },
   });
 
   //FIXME:
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   if (isError) {
     return <div>Something wrong</div>;
   }
-  
+
   const handleChangeFlag = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFlag(event.target.value.split(',')[0]);
     setNationality(event.target.value.split(',')[1]);
@@ -71,30 +71,38 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="h-full flex item-center flex-col justify-center min-h-screen p-10">
-        <div className="max-w-2xl px-10 md:px-0 md:mx-auto min-full flex-col flex items-center justify-center">
-          <div className=" max-w-2xl flex flex-col  items-center justify-center  text-center">
-            <h1 className=" self-start justify-end -mb-2 md:-mb-5 -ml-3 font-semibold transform -rotate-[25deg] text-sm md:text-lg text-black">
+      <div className="h-full flex item-center flex-col justify-center min-h-screen ">
+        <div className="max-w-7xl px-10 md:px-0 md:mx-auto min-full flex-col flex items-center justify-center ">
+          <div className="my-10 relative max-w-2xl flex flex-col items-center justify-center text-center">
+            <p className=" absolute -top-2 left-0 font-semibold transform -rotate-[25deg] text-sm md:text-lg text-black">
               say
-            </h1>
-            <h1 className="font-ka text-[50px] md:text-[70px] lg:text-[90px]  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-600 to-[#ff0080] ">
-              HELLO WORLD
-            </h1>
+            </p>
+            <h1 className="title">HELLO WORLD</h1>
           </div>
-          <div className="w-full gap-2 max-w-lg">
-            <div className="w-full flex flex-col  items-start gap-2 justify-center md:items-end">
+
+          <div className="max-w-7xl gap-2">
+            <div className=" w-full flex flex-col items-start gap-2 justify-center md:items-end">
               <div className="w-full">
                 <TextArea text="Message" msg={msg} onChange={handleChangeMsg} />
               </div>
 
               <form
-                className="w-full flex items-end justify-center space-x-4"
+                className="w-full flex flex-col items-center sm:items-end justify-center sm:space-x-4 "
                 onSubmit={(e: React.FormEvent<HTMLFormElement>) => addMsg(e)}
               >
-                <Input onChange={handleChangeName} text="By" />
-                <Select data={Flags} onChange={handleChangeFlag} text="From" />
-                <Select data={Feel} onChange={handleChangeFeeling} text="Feel" />
-                <Button />
+                <div className="w-full flex items-end justify-center space-x-4 ">
+                  <Input onChange={handleChangeName} text="By" />
+                  <Select data={Flags} onChange={handleChangeFlag} text="From" />
+                  <Select data={Feel} onChange={handleChangeFeeling} text="Feel" />
+
+                  <div className="hidden sm:block ">
+                    <Button />
+                  </div>
+                </div>
+
+                <div className="sm:hidden mt-5 w-full ">
+                  <Button />
+                </div>
               </form>
             </div>
           </div>
@@ -112,9 +120,9 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* MESSAGES */}
-        <div className="max-w-7xl mx-auto mt-5">
-          <h1 className="   text-sm text-black">Last messages:</h1>
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-5 place-items-center  ">
+        <div className="max-w-7xl mx-auto mt-5 ">
+          <h1 className="text-sm text-black">Last messages:</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-5 place-items-center  ">
             {allMsgs?.data &&
               [...allMsgs?.data]
                 ?.reverse()
