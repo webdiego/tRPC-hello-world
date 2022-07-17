@@ -74,7 +74,7 @@ const Home: NextPage = () => {
     <>
       <div className="h-full flex item-center flex-col justify-center min-h-screen ">
         <div className="max-w-7xl px-10 md:px-0 md:mx-auto min-full flex-col flex items-center justify-center ">
-          <div className="my-10 relative max-w-5xl flex flex-col items-center justify-center text-center">
+          <div className="mt-10 relative max-w-5xl flex flex-col items-center justify-center text-center">
             <p className=" absolute -top-3 left-0 font-semibold transform -rotate-[25deg] text-xs sm:text-sm md:text-lg text-black ">
               say
             </p>
