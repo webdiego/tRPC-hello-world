@@ -8,6 +8,7 @@ import TextArea from 'components/TextArea';
 import Message from 'components/Message';
 import { Flags } from '@data/Flags';
 import { Feel } from '@data/Feel';
+import Loading from 'components/Loading';
 
 const Home: NextPage = () => {
   //STATES
@@ -28,7 +29,7 @@ const Home: NextPage = () => {
   let allMsgs: any | undefined = data;
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
   //  TODO: HANDLE ERROR
   if (isError) {
